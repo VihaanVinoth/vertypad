@@ -22,7 +22,7 @@ The **Vertypad** is a custom, high-utility 4x2 matrix mechanical macropad featur
 
 ## Hardware and Schematic Pin Map
 
-The custom circuit traces hook into the Seeed Studio XIAO RP2040 using an efficient 4x2 matrix layout structure that fully incorporates all key matrices and the encoder click line:
+The custom circuit traces hook into the Seeed Studio XIAO RP2040 using a 4x2 matrix layout structure that fully incorporates all key matrices and the encoder click line:
 
 ### 1. Matrix Interconnects (COL2ROW)
 * **Columns (Output):** `COL0` ➔ **GP0**, `COL1` ➔ **GP28**, `COL2` ➔ **GP27**, `COL3` ➔ **GP26**
@@ -34,11 +34,11 @@ The custom circuit traces hook into the Seeed Studio XIAO RP2040 using an effici
 
 ## macOS Macro Profiles
 
-The integrated keymap configuration has macro controls tailored explicitly for Apple macOS systems:
+Here are the commands you can use currently:
 
-* **SW1 Location:** `Command + C` ➔ Immediate Copy Execution.
-* **SW3 Location:** `Command + V` ➔ Immediate Paste Insertion.
-* **SW5 Location:** `Command + Spacebar` ➔ Instantly launches Apple Spotlight Search.
-* **SW7 Location:** `Command + Control + Q` ➔ Instantly locks the Mac screen securely.
+* **SW1 Location:** `Command + C` -> Copies
+* **SW3 Location:** `Command + V` -> Pastes
+* **SW5 Location:** `Command + Spacebar` -> Launches Apple Spotlight Search.
+* **SW7 Location:** `Command + Control + Q` -> Locks the Mac screen.
 * **Rotary Dial (SW8):** Precise system hardware Volume Up / Volume Down adjustment steps.
 * **Encoder Click Button:** Instant target audio stream muting toggle.
