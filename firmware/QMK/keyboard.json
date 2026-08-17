@@ -1,23 +1,14 @@
 {
-    "keyboard_name": "VertyPad",
-    "url": "https://hackclub.com",
+    "keyboard_name": "vertypad",
     "maintainer": "Vihaan Vinoth",
-    "width": 4,
-    "height": 2,
-    "processor": "RP2040",
+    "manufacturer": "Hack Club",
+    "url": "https://hackclub.com",
     "bootloader": "rp2040",
-    "board": "SEEED_XIAO_RP2040",
-    "diode_direction": "COL2ROW",
-    "features": {
-        "bootmagic": true,
-        "command": false,
-        "console": false,
-        "extrakey": true,
-        "mousekey": true,
-        "nkro": true,
-        "encoder": true,
-        "oled": true
+    "processor": "RP2040",
+    "build": {
+        "debounce_type": "sym_defer_g"
     },
+    "diode_direction": "COL2ROW",
     "matrix_pins": {
         "cols": ["GP0", "GP28", "GP27", "GP26"],
         "rows": ["GP4", "GP3"]
@@ -27,12 +18,11 @@
             {"pin_a": "GP2", "pin_b": "GP1"}
         ]
     },
-    "development_board": "seeed_xiao_rp2040",
     "layouts": {
         "LAYOUT": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0}, {"matrix": [0, 1], "x": 1, "y": 0}, {"matrix": [0, 2], "x": 2, "y": 0}, {"matrix": [0, 3], "x": 3, "y": 0},
-                {"matrix": [1, 0], "x": 0, "y": 1}, {"matrix": [1, 1], "x": 1, "y": 1}, {"matrix": [1, 2], "x": 2, "y": 1}, {"matrix": [1, 3], "x": 3, "y": 1}
+                {"label": "SW1", "matrix": [0, 0], "x": 0, "y": 0}, {"label": "SW3", "matrix": [0, 1], "x": 1, "y": 0}, {"label": "SW5", "matrix": [0, 2], "x": 2, "y": 0}, {"label": "SW8_CLICK", "matrix": [0, 3], "x": 3, "y": 0},
+                {"label": "SW2", "matrix": [1, 0], "x": 0, "y": 1}, {"label": "SW4", "matrix": [1, 1], "x": 1, "y": 1}, {"label": "SW6","matrix": [1, 2], "x": 2, "y": 1}, {"label": "SW7", "matrix": [1, 3], "x": 3, "y": 1}
             ]
         }
     }

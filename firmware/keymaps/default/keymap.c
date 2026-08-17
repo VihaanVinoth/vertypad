@@ -1,6 +1,5 @@
 #include QMK_KEYBOARD_H
 
-// 1. Define custom Mac macro keycode identifiers
 enum custom_keycodes {
     MC_COPY = SAFE_RANGE, // Mac Copy (Cmd+C)
     MC_PASTE,             // Mac Paste (Cmd+V)
@@ -12,7 +11,7 @@ enum custom_keycodes {
 // Row 0: SW1 (Copy),  SW3 (Paste), SW5 (Spotlight), SW8 (Encoder Click - Mute)
 // Row 1: SW2 (Num 4), SW4 (Num 5), SW6 (Num 6),     SW7 (Lock Mac)
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    = LAYOUT(
+    [0] = LAYOUT(
         MC_COPY,  MC_PASTE, MC_SPOTLIGHT, KC_MUTE,  
         KC_4,     KC_5,     KC_6,         MC_LOCK     
     )
@@ -60,7 +59,10 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 #endif
 
 #if defined(OLED_ENABLE)
-bool oled_init_user(uint8_t idx) { return true; }
+// Update the signature to accept and return the proper rotation type
+oled_rotation_t oled_init_user(oled_rotation_t rotation) { 
+    return rotation; 
+}
 
 bool oled_task_user(void) {
     oled_write_P(PSTR("Vertypad macOS\n"), false);
