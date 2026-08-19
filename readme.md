@@ -1,6 +1,6 @@
 # Vertypad Macro Pad
 
-The **Vertypad** is a custom, high-utility 4x2 matrix mechanical macropad featuring an integrated rotary encoder, and a 0.91-inch OLED status display screen. It is built around the Seeed Studio XIAO RP2040 micro-controller, and powered by QMK (VIA support).
+The **Vertypad** is a custom 4x2 matrix mechanical macropad, featuring a rotary encoder, and a 0.91-inch OLED screen. It is built with the Seeed Studio XIAO RP2040 microcontroller, powered by QMK, and supports **cross-platform switching (macOS and Windows)** with an **interactive OLED UI menu**.
 
 ### PCB
 ![Vertypad PCB Trace Routing](assets/pcb.png)
@@ -8,37 +8,32 @@ The **Vertypad** is a custom, high-utility 4x2 matrix mechanical macropad featur
 ### Schematics
 ![Vertypad Matrix Schematic Map](assets/schema.png)
 
+### CAD
+![Vertypad CAD](assets/cad.png)
+
 ## BOM
 
-| Component Type | Part Description | Quantity | Notes |
-| :--- | :--- | :--- | :--- |
-| **Microcontroller** | Seeed Studio XIAO RP2040 | 1 | High-speed dual-core ARM Cortex-M0+ |
-| **Switches** | MX-Style Mechanical Switches | 7 | Sockets SW1 through SW7 |
-| **Rotary Encoder** | EC11 Rotary Encoder with Switch | 1 | Socket SW8 (Volume / Mute control) |
-| **Diodes** | 1N4148 Through-Hole Signal Diodes | 8 | Formed COL2ROW layout path isolation |
-| **Display Panel** | 0.91-inch I2C Monochromatic OLED | 1 | Pin order: GND - VCC - SCL - SDA (128x32) |
-| **Keycaps** | DSA Profile Blank Keycaps | 7 | Uniform shape height mapping |
-| **Screws**| M3 x 16mm Screws | 4 | Secures the 3.0mm plate layer |
+| Component Type | Part Description | Quantity |
+| :--- | :--- | :--- | 
+| **Microcontroller** | Seeed Studio XIAO RP2040 | 1 |
+| **Switches** | Cherry MX-Style Mechanical Switches | 7 |
+| **Rotary Encoder** | EC11 Rotary Encoder with Switch | 1 | 
+| **Diodes** | 1N4148 Through-Hole Signal Diodes | 8 |
+| **Display Panel** | 0.91-inch I2C Monochromatic OLED | 1 | 
+| **Keycaps** | DSA Profile Blank Keycaps | 7 | 
+| **Screws**| M3 x 16mm Screws | 4 | 
+| **Case** | 3D Printed Case/Plate | 1 |
+| **PCB** | 
 
-## Hardware and Schematic Pin Map
+## Keymap & Feature Profiles
 
-The custom circuit traces hook into the Seeed Studio XIAO RP2040 using a 4x2 matrix layout structure that fully incorporates all key matrices and the encoder click line:
+The VertyPad supports various macro commands across MacOS and Windows:
 
-### 1. Matrix Interconnects (COL2ROW)
-* **Columns (Output):** `COL0` ➔ **GP0**, `COL1` ➔ **GP28**, `COL2` ➔ **GP27**, `COL3` ➔ **GP26**
-* **Rows (Input):** `ROW0` ➔ **GP4**, `ROW1` ➔ **GP3**
-
-### 2. Specialized Component Pins
-* **EC11 Rotary Encoder:** `RNA (Phase A)` ➔ **GP2**, `RNB (Phase B)` ➔ **GP1**
-* **OLED Screen Bus (I2C1):** `SDA` ➔ **GP6**, `SCL` ➔ **GP7**
-
-## macOS Macro Profiles
-
-Here are the commands you can use currently:
-
-* **SW1 Location:** `Command + C` -> Copies
-* **SW3 Location:** `Command + V` -> Pastes
-* **SW5 Location:** `Command + Spacebar` -> Launches Apple Spotlight Search.
-* **SW7 Location:** `Command + Control + Q` -> Locks the Mac screen.
-* **Rotary Dial (SW8):** Precise system hardware Volume Up / Volume Down adjustment steps.
-* **Encoder Click Button:** Instant target audio stream muting toggle.
+* **Copy:** `Command + C` (macOS) or `Control + C` (Windows).
+* **Paste:** `Command + V` (macOS) or `Control + V` (Windows).
+* **Spotlight/Search:** Launches Apple Spotlight Search (`Cmd + Space`) or Windows Search (`Win + S`).
+* **Lock:** Locks the screen (`Cmd + Ctrl + Q` on Mac, `Win + L` on Windows).
+* **Standard Keycodes:** Standard layout keycodes (`KC_4` and `KC_6`).
+* **UI Select** Interactively toggles configuration states, such as switching between macOS and Windows modes on the OLED screen.
+* **Rotary Dial Turn:** Cycles forward and backward through the **OLED UI menu screens** (Dashboard, OS Config, and Hardware Status).
+* **Encoder Click Button (SW8):** Instant system audio stream mute toggle (`KC_MUTE`).
