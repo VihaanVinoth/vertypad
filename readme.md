@@ -1,15 +1,15 @@
 # VertyPad
 
-The **Vertypad** is a custom 4x2 matrix mechanical macropad, featuring a rotary encoder, and a 0.91-inch OLED screen. It is built with the Seeed Studio XIAO RP2040 microcontroller, powered by QMK, and supports **cross-platform switching (macOS and Windows)** with an **interactive OLED UI menu**.
+The **VertyPad** is a custom 4x2 matrix mechanical macropad, featuring a rotary encoder, and a 0.91-inch OLED screen. It is built with the Seeed Studio XIAO RP2040 microcontroller, powered by QMK, and supports **cross-platform switching (macOS and Windows)** with an **interactive OLED UI menu**.
 
 ### PCB
-![Vertypad PCB Trace Routing](assets/pcb.png)
+![VertyPad PCB Trace Routing](assets/pcb.png)
 
 ### Schematics
-![Vertypad Matrix Schematic Map](assets/schema.png)
+![VertyPad Matrix Schematic Map](assets/schema.png)
 
 ### CAD
-![Vertypad CAD](assets/cad.png)
+![VertyPad CAD](assets/cad.png)
 
 ## BOM
 
