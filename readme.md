@@ -23,6 +23,7 @@ The **VertyPad** is a custom 4x2 matrix mechanical macropad, featuring a rotary 
 | **Keycaps** | DSA Profile Blank Keycaps | 7 | 
 | **Screws**| M3 x 16mm Screws | 4 | 
 | **Case** | 3D Printed Case/Plate | 1 |
+| **PCB** | A PCB | 1 |
 
 ## Keymap & Feature Profiles
 
